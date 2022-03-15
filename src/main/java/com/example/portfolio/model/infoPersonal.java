@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class infoPersonal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id;
 
     private String nombreyapellido;

@@ -13,6 +13,7 @@ public class infoPersonalController {
     @Autowired
     private IPersonalService interPersonal;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping ("/descripcion")
     public List<infoPersonal> getInfoPersonal() {
         return interPersonal.getInfoPersonal();
@@ -37,7 +38,7 @@ public class infoPersonalController {
         infoPerso.setPuesto(nuevoPuesto);
         infoPerso.setUbicacion(nuevoUbicacion);
 
-        interPersonal.saveInfoPersonal(infoPerso);
+        interPersonal.saveInfoPersonal(infoPerso);        
 
         return infoPerso;
     }
