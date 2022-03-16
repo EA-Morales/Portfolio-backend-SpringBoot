@@ -5,12 +5,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class infoPersonal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id;
 
     private String nombreyapellido;

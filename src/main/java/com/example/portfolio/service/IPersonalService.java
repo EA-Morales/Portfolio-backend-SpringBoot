@@ -8,7 +8,7 @@ public interface IPersonalService {
 
     public List<infoPersonal> getInfoPersonal();
 
-    public void saveInfoPersonal (infoPersonal infoPerso);
+    public void saveInfoPersonal (infoPersonal info);
 
     public void deleteInfoPersonal (Long id);
 

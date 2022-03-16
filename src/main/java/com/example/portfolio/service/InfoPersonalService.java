@@ -20,8 +20,8 @@ public class InfoPersonalService implements IPersonalService {
     }
 
     @Override
-    public void saveInfoPersonal(infoPersonal infoPerso) {
-        infoRepository.save(infoPerso);
+    public void saveInfoPersonal(infoPersonal info) {
+        infoRepository.save(info);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class InfoPersonalService implements IPersonalService {
 
     @Override
     public infoPersonal findInfoPersonal(Long id) {
-        infoPersonal infoPerso = infoRepository.findById(id).orElse(null);
-        return  infoPerso;
+        infoPersonal info = infoRepository.findById(id).orElse(null);
+        return  info;
     }
 }
