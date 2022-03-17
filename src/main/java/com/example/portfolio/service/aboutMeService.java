@@ -22,4 +22,21 @@ public class aboutMeService implements IAboutMeService {
         return listaAboutMe;
     }
 
+    @Override
+    public void saveAboutMe(aboutMe about) {
+        aboutRepository.save(about);
+    }
+
+    @Override
+    public void deleteAboutMe(Long id) {
+        aboutRepository.deleteById(id);
+    }
+
+    @Override
+    public aboutMe findAboutMe(Long id) {
+        aboutMe about = aboutRepository.findById(id).orElse(null);
+
+        return about;
+    }
+
 }

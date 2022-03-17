@@ -9,7 +9,7 @@ public interface IAboutMeService {
 
     public void saveAboutMe(aboutMe about);
 
-    public void deleteAboutMe(aboutMe about);
+    public void deleteAboutMe(Long id);
 
     public aboutMe findAboutMe(Long id);
 
