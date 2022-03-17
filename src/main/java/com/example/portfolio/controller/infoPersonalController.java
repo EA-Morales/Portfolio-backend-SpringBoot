@@ -13,7 +13,6 @@ public class infoPersonalController {
     @Autowired
     private IPersonalService interPersonal;
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/banner")
     public List<infoPersonal> getInfoPersonal() {
         return interPersonal.getInfoPersonal();
@@ -26,7 +25,6 @@ public class infoPersonalController {
         return "la descripcion se ha cambiado correctamente";
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/banner/{id}")
     public infoPersonal editInfoPersonal(@PathVariable Long id,
             @RequestBody infoPersonal info) {
