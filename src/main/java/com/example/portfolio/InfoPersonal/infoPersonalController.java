@@ -19,7 +19,6 @@ public class infoPersonalController {
     @PostMapping("/banner")
     public String createInfoPersonal(@RequestBody infoPersonal infoPerso) {
         interPersonal.saveInfoPersonal(infoPerso);
-
         return "la descripcion se ha cambiado correctamente";
     }
 
