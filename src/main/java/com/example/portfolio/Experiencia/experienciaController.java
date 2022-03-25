@@ -17,15 +17,15 @@ public class experienciaController {
     }
 
     @PostMapping("/experiencia")
-    public String createExperiencia (@RequestBody experiencia exp) {
+    public experiencia createExperiencia (@RequestBody experiencia exp) {
         interExperiencia.saveExperiencia(exp);
-        return "La experiencia ha sido añadida correctamente";
+        return exp;
     }
 
     @DeleteMapping("/experiencia/borrar/{id}")
-    public String deleteExperiencia(@PathVariable Long id){
+    public Long deleteExperiencia(@PathVariable Long id){
         interExperiencia.deleteExperiencia(id);
-        return "La experiencia fue borrada exitosamente";
+        return id;
     }
 
     @PutMapping("/experiencia/{id}")
