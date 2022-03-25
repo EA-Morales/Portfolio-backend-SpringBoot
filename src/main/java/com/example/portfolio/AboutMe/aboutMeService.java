@@ -1,10 +1,6 @@
-package com.example.portfolio.service;
+package com.example.portfolio.AboutMe;
 
 import java.util.List;
-
-import com.example.portfolio.model.aboutMe;
-
-import com.example.portfolio.repository.aboutMeRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,5 @@
-package com.example.portfolio.service;
+package com.example.portfolio.InfoPersonal;
 
-import com.example.portfolio.model.infoPersonal;
-import com.example.portfolio.repository.InfoPersonalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

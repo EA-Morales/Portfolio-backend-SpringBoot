@@ -1,4 +1,4 @@
-package com.example.portfolio.model;
+package com.example.portfolio.InfoPersonal;
 
 import lombok.Getter;
 import lombok.Setter;

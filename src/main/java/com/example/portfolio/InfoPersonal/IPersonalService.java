@@ -1,6 +1,6 @@
-package com.example.portfolio.service;
+package com.example.portfolio.InfoPersonal;
 
-import com.example.portfolio.model.infoPersonal;
+import com.example.portfolio.InfoPersonal.infoPersonal;
 import java.util.List;
 
 public interface IPersonalService {

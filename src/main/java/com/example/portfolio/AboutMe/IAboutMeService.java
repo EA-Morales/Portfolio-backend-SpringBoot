@@ -1,7 +1,7 @@
-package com.example.portfolio.service;
+package com.example.portfolio.AboutMe;
 
 import java.util.List;
-import com.example.portfolio.model.aboutMe;
+
 
 public interface IAboutMeService {
 

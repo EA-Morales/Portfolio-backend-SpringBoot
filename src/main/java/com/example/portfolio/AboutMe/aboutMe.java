@@ -1,4 +1,4 @@
-package com.example.portfolio.model;
+package com.example.portfolio.AboutMe;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

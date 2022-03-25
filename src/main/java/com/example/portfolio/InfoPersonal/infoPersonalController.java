@@ -1,7 +1,5 @@
-package com.example.portfolio.controller;
+package com.example.portfolio.InfoPersonal;
 
-import com.example.portfolio.model.infoPersonal;
-import com.example.portfolio.service.IPersonalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
