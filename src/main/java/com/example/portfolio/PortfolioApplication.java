@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -25,6 +27,11 @@ public class PortfolioApplication {
     }
 
     @Bean
+    PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
@@ -40,7 +47,7 @@ public class PortfolioApplication {
         return new CorsFilter(urlBasedCorsConfigurationSource);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner run(UserService userService){
         return args -> {
             userService.saveRole(new Role(null, "ROLE_ADMIN"));
@@ -49,7 +56,7 @@ public class PortfolioApplication {
 
             userService.addRoleToUser("admin", "ROLE_ADMIN");
         };
-    }
+    }*/
 
     /*@Bean
     public WebMvcConfigurer corsConfigurer() {
