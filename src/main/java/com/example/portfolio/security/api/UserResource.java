@@ -18,10 +18,10 @@ import java.util.List;
 public class UserResource {
     private final UserService userService;
 
-    @GetMapping("/users")
+    /*@GetMapping("/users")
     public ResponseEntity<List<AppUser>>getUsers(){
         return ResponseEntity.ok().body(userService.getUsers());
-    }
+    }*/
 
     @PostMapping("/users/save")
     public ResponseEntity<AppUser>saveUser(@RequestBody AppUser user){
