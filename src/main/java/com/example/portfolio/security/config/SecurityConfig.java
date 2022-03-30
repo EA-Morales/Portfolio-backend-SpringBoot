@@ -33,10 +33,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.cors();
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(STATELESS);
         http.authorizeRequests().antMatchers("/login/**").permitAll();
-        http.authorizeRequests().antMatchers(GET, "/**").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/api/user").hasAnyAuthority("ROLE_ADMIN");
+        http.authorizeRequests().antMatchers(GET, "/banner").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/descripcion").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/experiencia").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/educacion").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/skills").permitAll();
+        http.authorizeRequests().antMatchers(GET, "/proyectos").permitAll();
+        //http.authorizeRequests().antMatchers(GET, "/**").permitAll();
         http.authorizeRequests().antMatchers(POST, "/**").hasAnyAuthority("ROLE_ADMIN");
         http.authorizeRequests().anyRequest().authenticated();
         http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
@@ -55,3 +63,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 // Permite que pase all
 // http.authorizeRequests().anyRequest().permitAll();
+
+// Aplica el filtro antes de todo
+// http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+
+// Todos los filtros
+// http.authorizeRequests().antMatchers("/login/**").permitAll();
+// http.authorizeRequests().antMatchers(GET, "/**").permitAll();
+// http.authorizeRequests().antMatchers(POST, "/**").hasAnyAuthority("ROLE_ADMIN");
+
+//  http.authorizeRequests().antMatchers(GET, "/banner").permitAll();
+//  http.authorizeRequests().antMatchers(GET, "/descripcion").permitAll();
+//  http.authorizeRequests().antMatchers(GET, "/experiencia").permitAll();
+//  http.authorizeRequests().antMatchers(GET, "/educacion").permitAll();
+//  http.authorizeRequests().antMatchers(GET, "/skills").permitAll();
+//  http.authorizeRequests().antMatchers(GET, "/proyectos").permitAll();

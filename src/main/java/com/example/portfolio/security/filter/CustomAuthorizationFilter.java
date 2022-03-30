@@ -68,3 +68,5 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter {
 
     }
 }
+
+// request.getMethod().equals("GET"))
