@@ -34,8 +34,10 @@ public class proyectoController {
 
         proyecto proyec = interProyecto.findProyecto(id);
 
+        proyec.setImg(proye.getImg());
         proyec.setTitulo(proye.getTitulo());
         proyec.setDescripcion(proye.getDescripcion());
+        proyec.setLink(proye.getLink());
 
         interProyecto.saveProyecto(proyec);
 

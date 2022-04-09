@@ -17,6 +17,8 @@ public class proyecto {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    private String img;
     private String titulo;
     private String descripcion;
+    private String link;
 }
